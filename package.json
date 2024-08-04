@@ -1,0 +1,27 @@
+{
+  "name": "pagiii",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "esbuild-plugin-stimulus": "^0.1.5",
+    "esbuild-plugin-vue3": "^0.3.2",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7",
+    "vue": "^3.0.11"
+  },
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.1",
+    "@vue/compiler-sfc": "^3.0.11",
+    "concurrently": "^8.1.0",
+    "esbuild": "^0.17.10",
+    "esbuild-style-plugin": "^1.6.2",
+    "stimulus-scroll-reveal": "^3.2.0"
+  }
+}

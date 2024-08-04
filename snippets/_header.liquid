@@ -1,0 +1,28 @@
+<header style="" data-controller="nav-menu" data-menu-scroll-target="menu" class="bg-black py-4 lg:z-30 text-white top-header lg:fixed lg:h-16 flex flex-wrap justify-between items-center md:space-x4 px-6 lg:w-full lg:top-0">
+  <div style="" class="flex w-full py-2 lg:w-1/3 lg:py-0">
+    <a href="{{root_url}}" class="block flex-1" style="">    
+      <span class="font-bold h-6 md:-h-8 text-orange-300 text-4xl">{{ site_name }}</span>
+    </a>
+    
+    <div style="" class="">
+      <button data-nav-menu-target="open" data-action="nav-menu#showMenu" class="inline-block lg:hidden w-8 h-8  text-gray-600 p-1 text-white">
+        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+      </button>
+      <button data-nav-menu-target="close" data-action="nav-menu#closeMenu" class="hidden inline-block  w-8 h-8 text-gray-600 p-1 text-white">
+        X
+      </button>
+    </div>
+  </div>
+
+  
+  <nav style="" data-nav-menu-target="nav" class="flex flex-col container text-xl hidden w-full justify-start pt-4 lg:block lg:flex-1 lg:text-right  lg:left-0 lg:z-20  lg:flex-row  lg:w-1/3 lg:bg-gray-600 lg:items-center lg:p-0  lg:p-0 shadow-md lg:rounded-none lg:shadow-none lg:bg-transparent">    
+    <a href="{{root_url}}" style="" class="my-2 block text-white font-bold hover:text-orange-400 lg:inline lg:mx-2">
+      Home
+    </a>
+    <a href="{{root_url}}/pages/contact" class="my-2 block text-white font-bold hover:text-orange-400 lg:inline lg:mx-2">
+      Kontak
+    </a>
+    <a data-action="click->search#showSearchBar" class="my-2 font-bold hover:text-orange-400 lg:inline lg:mx-2">Search</a>    
+  </nav>
+  
+</header>

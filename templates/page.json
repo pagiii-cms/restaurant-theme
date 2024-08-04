@@ -1,0 +1,10 @@
+{
+  "sections": {
+    "main": {
+      "type": "page_show"
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,32 @@
+<div class="flex flex-wrap mt-10">
+  {% if search.pages.items.size > 0 %}
+    {% for page in search.pages.items %}
+      <div style="" class="w-full md:w-1/2 mt-10">
+        <div style="" class="bg-white mx-auto w-80 h-52 border-2 rounded drop-shadow-xl">                
+          <img src="{{pagiii_url}}/{{page.image_url}}"/>
+        </div>
+
+        <div style="" class="mx-auto w-80 mt-4">
+          <div style="" class="text-gray-600">                  
+            {{ page.created_at | date: "%d %b %Y" }}
+          </div>
+          <div style="" class="text-black-600 text-2xl">
+            <a href="{{root_url}}/pages/{{page.handle}}">{{ page.title }}</a>
+          </div>
+          <div style="" class="text-gray-600 mt-5">
+            {{ page.body_preview }}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  {% else %}
+    <div class="text-gray-600 text-center w-full py-6">
+      Pencarian dengan kata kunci tersebut tidak ditemukan.
+    </div>
+  {% endif %}
+</div>
+
+<div class="mt-10 text-center text-xl2">
+  {{ search.pages | paginate }}
+</div>
+

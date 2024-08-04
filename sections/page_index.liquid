@@ -1,0 +1,30 @@
+
+  {% paginate pages by 20, page: 1 %}
+    <div class="flex flex-wrap mt-10">
+      {% for page in paginated.items %}
+
+        <div style="" class="w-full lg:w-1/2 mt-10">
+          <div style="" class="bg-white mx-auto w-80 h-52 border-2 rounded drop-shadow-xl">                
+            <img src="{{pagiii_url}}/{{page.image_url}}"/>
+          </div>
+
+          <div style="" class="mx-auto w-80 mt-4">
+            <div style="" class="text-gray-600">                  
+              {{ page.created_at | date: "%d %b %Y" }}
+            </div>
+            <div style="" class="text-black-600 text-2xl">
+              <a href="{{root_url}}/pages/{{page.handle}}">{{ page.title }}</a>
+            </div>
+            <div style="" class="text-gray-600 mt-5">
+              {{ page.body_preview }}
+            </div>
+          </div>
+        </div>
+
+      {% endfor %}
+    </div>
+    <div class="text-center mt-10 text-2xl">   
+      {{paginated | paginate}}
+    </div>
+  {% endpaginate %}
+

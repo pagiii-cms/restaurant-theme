@@ -1,0 +1,64 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
+
+* {
+  font-family: 'Nunito', sans-serif;
+}
+.top-header{
+  /*background-color: rgb(13, 17, 33);*/
+}
+
+.hero{
+  height: 750px;
+}
+
+.right-image {
+  width: 500px;
+  /*height: 500px;*/
+  animation: slow-wheel 30s infinite linear;
+}
+
+@keyframes slow-wheel {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 1s cubic-bezier(0.5, 0, 0, 1);
+  transition-property: opacity, transform;
+}
+
+.reveal.in {
+  opacity: 1;
+  transform: none;
+}
+.font-pacifico {
+  font-family: 'Pacifico', cursive;
+}
+
+.video {
+  height: 500px;
+}
+
+.book {
+  background-color: rgb(13, 17, 33);
+}
+
+.chef-photo {
+  clip-path: circle(40%);
+}
+
+.testimony-picker div.active {
+  border: 1px solid orange !important;
+  background-color: orange !important;
+
+}
